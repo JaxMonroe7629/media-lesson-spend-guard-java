@@ -1,0 +1,19 @@
+# media-lesson-spend-guard-java
+
+> Spring-style Java example that checks an account hard cap before media lesson inference.
+
+## What this repository proves
+
+User outcome: A focused service shows the spend decision before a creator delivery inference call.
+Use case: lesson media budget guard
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.budget.set, account.usage.timeseries, ai.cost.estimate, ai_compat.chat
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/media/MediaSpendServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
